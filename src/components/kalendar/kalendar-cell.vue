@@ -4,6 +4,8 @@
 			<portal-target name="calendar-card" :slot-props="appointment_props" v-if="!appointment_props.data">
 			</portal-target>
 			<portal-target class="calendar-card-details" name="calendar-card-details" :slot-props="appointment_props" v-if="appointment_props.data">
+				<div :class="appointment_props.data.class">
+				</div>
 			</portal-target>
 			<div class="popup-parent" v-if="status === 'popup-initiated'" ref="popupRef">
 				<div>
